@@ -15,7 +15,7 @@ jobs:
       run: |
         npm install
         yarn add electron-builder --dev
-        yarn dist:dir
+        electron-builder --w exe
 
     - name: Upload file
       uses: actions/upload-artifact@v2
