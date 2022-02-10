@@ -8,22 +8,34 @@
   "scripts": {
     "start": "electron ."
   },
+  "repository": "https://github.com/gchq/CyberChef",
   "keywords": [
     "Electron",
     "CyberChef",
     "CyberSwissArmyKnife"
   ],
-
- 
+  "author": {
+      "name": "CyberChef",
+      "email": "n1474335@gmail.com",
+      "url": "https://github.com/gchq/CyberChef"
+    },
+  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^15.3.0"
-    "electron-builder": "^22.10.5"
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5"
   },
   "build": {
     "appId": "com. github.CyberChef",
-    
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icons/icon.png"
+    },
     "win": {
       "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
       "icon": "build/icon.png"
     }
   }
