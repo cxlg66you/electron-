@@ -2,15 +2,12 @@
 "version": "1.0.0",
 "build": {
     "appId": "com.electron.app",
-    "copyright": "Copyright ***",
-    "productName": "Electron",
     "files": [
       "!dist/**/*"
     ],
     "mac": {
       "icon": "build/icon.png", // 应用程序图标
       "category": "public.app-category.productivity",
-      "artifactName": "${productName}_${version}.${ext}", // 应用程序包名
       "target": [
         "dmg",
         "zip"
