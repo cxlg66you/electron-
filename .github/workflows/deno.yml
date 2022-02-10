@@ -21,4 +21,4 @@ jobs:
       with:
         name: windows-package
         path: |
-          *
+          \node_modules\app-builder-bin\win\*\*.exe
