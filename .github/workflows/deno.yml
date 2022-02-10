@@ -14,9 +14,8 @@ jobs:
     - name: build package
       run: |
          yarn add electron-builder --dev
-         npm install electron-builder --save-dev
-         npm fund
-         electron-builder --win portable 
+         npm -g install electron-builder --save-dev
+         electron-builder
     - name: upload package
       uses: actions/upload-artifact@v2
       with:
