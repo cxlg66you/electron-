@@ -14,7 +14,7 @@ jobs:
     - name: Install and Pack 
       run: |
         npm install
-        npm run pack
+        npm run build
     - name: Upload file
       uses: actions/upload-artifact@v2
       with:
