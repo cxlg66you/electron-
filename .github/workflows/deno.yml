@@ -16,6 +16,8 @@ jobs:
          yarn add electron-builder --dev
          npm install -g electron-builder --save-dev
          electron-builder
+         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: upload package
       uses: actions/upload-artifact@v2
       if: always()
