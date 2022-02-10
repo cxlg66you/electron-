@@ -12,7 +12,7 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - name: build package
-      run: npm run buildWindows
+      run: electron-builder --win
     - name: upload package
       uses: actions/upload-artifact@v2
       with:
