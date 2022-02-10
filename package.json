@@ -29,6 +29,7 @@
     "appId": "com. github.CyberChef",
    
     "win": {
+     "icon": "build/icon.png"
      "target": [
       {
         "target": "nsis",
@@ -38,10 +39,6 @@
         ]
       }
     ]
-    },
-    "linux": {
-      "target": "AppImage",
-      "icon": "build/icon.png"
     }
   }
 }
