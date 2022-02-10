@@ -16,6 +16,7 @@ jobs:
         npm install
         yarn add electron-builder --dev
         npm install -g electron-builder
+        npm install -g electron
         electron-builder --win portable
 
     - name: Upload file
