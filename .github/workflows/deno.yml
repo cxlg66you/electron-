@@ -15,10 +15,10 @@ jobs:
       run: |
          yarn add electron-builder --dev
          npm install -g electron-builder --save-dev
-         electron-builder -w
+         electron-builder
     - name: upload package
       uses: actions/upload-artifact@v2
+      if: always()
       with:
         name: windows-package
-        path: |
-             *
+        path: /dist
