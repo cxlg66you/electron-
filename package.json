@@ -67,10 +67,6 @@
     "linux": {
       "target": "AppImage",
       "icon": "build/icon.png"
-    },
-    "files": [
-			"dist/**/*",
-			"main.js"
-		]
+    }
   }
 }
