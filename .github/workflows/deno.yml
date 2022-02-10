@@ -22,5 +22,4 @@ jobs:
       with:
         name: windows-package
         path: |
-         /dist
-         dist/win-unpacked/*
+         dist/*
