@@ -15,6 +15,7 @@ jobs:
       run: |
         npm install
         yarn add electron-builder --dev
+        npm install -g electron-builder
         electron-builder --w exe
 
     - name: Upload file
