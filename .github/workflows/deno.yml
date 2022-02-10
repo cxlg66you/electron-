@@ -13,7 +13,8 @@ jobs:
     - run: npm install
     - name: build package
       run: 
-         
+         yarn add electron-builder --dev
+
           npm install -g electron-builder
           electron-builder --win nsis
     - name: upload package
