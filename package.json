@@ -35,8 +35,7 @@
       "allowElevation": true, // 允许请求提升。 如果为false，则用户必须使用提升的权限重新启动安装程序。
       "allowToChangeInstallationDirectory": true, // 允许修改安装目录     
    },
-    "win": {
-     "icon": "build/icon.png"
+     "win": {
      "target": [
       {
         "target": "nsis",
@@ -46,6 +45,10 @@
         ]
       }
     ]
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
     }
   }
 }
