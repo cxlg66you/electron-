@@ -1,36 +1,77 @@
 {
-"name": "Electron",
-"version": "1.0.0",
-"build": {
-    "appId": "com.electron.app",
-    "files": [
-      "!dist/**/*"
-    ],
+  "name": "cyberchef",
+  "email" : "n1474335@gmail.com",
+  "version": "1.0.0",
+  "description": "The Cyber Swiss Army Knife",
+  "main": "main.js",
+  "author": "n1474335 <n1474335@gmail.com>",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/gchq/CyberChef",
+  "keywords": [
+    "Electron",
+    "CyberChef",
+    "CyberSwissArmyKnife"
+  ],
+  "author": {
+      "name": "CyberChef",
+      "email": "n1474335@gmail.com",
+      "url": "https://github.com/gchq/CyberChef"
+    },
+  "license": "CC0-1.0",
+  "scripts": {
+    "test": "standard --verbose js/**/*.js main/*.js",
+    "watch": "node ./scripts/watch.js",
+    "startElectron": "electron . --development-mode",
+    "start": "npm run build && concurrently \"npm run watch\" \"npm run startElectron\"",
+    "buildMain": "node ./scripts/buildMain.js",
+    "buildBrowser": "node ./scripts/buildBrowser.js",
+    "buildBrowserStyles": "node ./scripts/buildBrowserStyles.js",
+    "buildPreload": "node ./scripts/buildPreload.js",
+    "build": "npm run buildMain && npm run buildBrowser && npm run buildBrowserStyles && npm run buildPreload",
+    "buildWindows": "npm run build && node ./win.js",
+    "buildMacIntel": "npm run build && node ./scripts/buildMac.js --platform=x86",
+    "buildMacArm": "npm run build && node ./scripts/buildMac.js --platform=arm64",
+    "buildDebian": "npm run build && node ./scripts/buildDebian.js --platform=amd64",
+    "buildRaspi": "npm run build && node ./scripts/buildDebian.js --platform=armhf",
+    "buildLinuxArm64": "npm run build && node ./scripts/buildDebian.js --platform=arm64",
+    "buildRedhat": "npm run build && node ./scripts/buildRedhat.js",
+    "buildAll": "npm run buildWindows && npm run buildMacIntel && npm run buildMacArm && npm run buildDebian && npm run buildRedhat && npm run buildRaspi && npm run buildLinuxArm64",
+    "updateFilters": "node ./ext/filterLists/updateEasylist.js",
+    "updateHttpsList": "node ./ext/httpsUpgrade/updateHttpsList.js",
+    "updateSuffixes": "node ./ext/publicSuffixes/updateSuffixes.js",
+    "lint": "prettier --write **/**/*.css **/**/*.md **/**/*.html **/**/*.json && standard --fix js/**/*.js main/*.js | snazzy"
+  },
+  "devDependencies": {
+    "electron": "^15.3.0",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "appId": "com. github.CyberChef",
     "mac": {
-      "icon": "build/icon.png", // 应用程序图标
-      "category": "public.app-category.productivity",
-      "target": [
-        "dmg",
-        "zip"
-      ]
+      "target": "dmg",
+      "icon": "build/icons/icon.png"
     },
     "win": {
-      "icon": "build/icon.png",
-      "artifactName": "${productName}_${version}.${ext}",
-      "verifyUpdateCodeSignature": false,
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "ia32"
-          ]
-        }
-      ]
+     "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }
+    ]
     },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  },
     "nsis": { 
       "oneClick": false, // 是否一键安装
       "createDesktopShortcut": "always", // 是否添加桌面快捷方式
       "allowToChangeInstallationDirectory": true,// 允许修改安装目录
     },
-    "extends": null
-  }
+}
