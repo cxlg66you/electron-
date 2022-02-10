@@ -68,10 +68,5 @@
       "target": "AppImage",
       "icon": "build/icon.png"
     }
-  },
-    "nsis": { 
-      "oneClick": false, // 是否一键安装
-      "createDesktopShortcut": "always", // 是否添加桌面快捷方式
-      "allowToChangeInstallationDirectory": true,// 允许修改安装目录
-    },
+  }
 }
