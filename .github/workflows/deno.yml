@@ -16,7 +16,8 @@ jobs:
          yarn add electron-builder --dev
 
           npm install -g electron-builder
-          electron-builder --win nsis
+          electron-builder -win
+          electron-builder -mwl 
     - name: upload package
       uses: actions/upload-artifact@v2
       with:
