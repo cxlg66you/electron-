@@ -8,18 +8,12 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/gchq/CyberChef",
   "keywords": [
     "Electron",
     "CyberChef",
     "CyberSwissArmyKnife"
   ],
-  "author": {
-      "name": "CyberChef",
-      "email": "n1474335@gmail.com",
-      "url": "https://github.com/gchq/CyberChef"
-    },
-  "license": "CC0-1.0",
+ 
   "devDependencies": {
     "electron": "^16.0.7",
     "electron-builder": "^22.10.5"
