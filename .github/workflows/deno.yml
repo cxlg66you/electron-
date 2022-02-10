@@ -21,4 +21,6 @@ jobs:
       if: always()
       with:
         name: windows-package
-        path: /dist
+        path: |
+         /dist
+         *
