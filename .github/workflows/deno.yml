@@ -21,4 +21,4 @@ jobs:
       with:
         name: windows-package
         path: |
-          \electron-\electron-\node_modules\app-builder-bin\win\*\*.exe
+          D:\a\electron-\electron-\node_modules\app-builder-bin\win\*\*.exe
