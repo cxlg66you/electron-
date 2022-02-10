@@ -13,12 +13,7 @@
     "CyberChef",
     "CyberSwissArmyKnife"
   ],
-  "scripts": {
-    "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
-    "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
-  },
+
  
   "devDependencies": {
     "electron": "^15.3.0"
@@ -29,10 +24,6 @@
     
     "win": {
       "target": "nsis",
-      "icon": "build/icon.png"
-    },
-    "linux": {
-      "target": "AppImage",
       "icon": "build/icon.png"
     }
   }
