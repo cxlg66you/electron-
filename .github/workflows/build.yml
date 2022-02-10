@@ -14,7 +14,7 @@ jobs:
     - name: Install and Pack 
       run: |
         npm install
-        npm install -g electron-builder
+        yarn add electron-builder --dev
         yarn dist:dir
 
     - name: Upload file
